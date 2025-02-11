@@ -9,11 +9,11 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Prince Sharma / Computational Material Scientist"
+title                    : "Prince Sharma'a Homepage"
 title_separator          : "-"
 name                     : &name "Prince Sharma"
 description              : &description "Postdoctoral-researcher at Johns Hopkins Extreme Materials Institute"
-url                      : "https://pshatom/" # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
+url                      : "https://pshatom.github.io" # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "prince-sharma.github.io"
 
