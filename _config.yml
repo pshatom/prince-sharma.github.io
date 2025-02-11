@@ -12,7 +12,7 @@ site_theme               : "default"
 title                    : "Prince Sharma'a Homepage"
 title_separator          : "-"
 name                     : &name "Prince Sharma"
-description              : &description "Postdoctoral-researcher at Johns Hopkins Extreme Materials Institute"
+description              : &description "Postdoctoral-researcher"
 url                      : "https://pshatom.github.io" # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "prince-sharma.github.io"
@@ -25,7 +25,7 @@ author:
   avatar           : "profile.png"
   name             : "Prince Sharma"
   pronouns         : # example: "she/her"  
-  bio              : "Computational Material Scientisy"
+  bio              : "Computational Material Scientist"
   location         : "Baltimore"
   employer         : "Johns Hopkins University"
   uri              : # URL
@@ -54,6 +54,7 @@ author:
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
+  github           : "pshatom"
   goodreads        : # Username
   google_plus      : # Username
   keybase          : # Username
