@@ -22,7 +22,7 @@ repository               : "prince-sharma.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "prince-sharma.github.io/blob/master/images/prince-profile.png"
+  avatar           : "images/prince-profile.png"
   name             : "Prince Sharma"
   pronouns         : # example: "she/her"  
   bio              : "Computational Material Scientist"
@@ -45,7 +45,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "academicpages"
+  github           : "pshatom"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
@@ -54,7 +54,6 @@ author:
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
-  github           : "pshatom"
   goodreads        : # Username
   google_plus      : # Username
   keybase          : # Username
