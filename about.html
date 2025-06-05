@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Prince Sharma - About Me</title>
+    <!-- Add Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /* Social Links Styling */
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 15px;
+        }
+        .social-links a {
+            margin: 10px 0;
+            display: inline-block;
+        }
+        .social-links i {
+            font-size: 26px;
+            transition: transform 0.2s ease-in-out;
+            color: #333;
+        }
+        /* Custom colors for specific platforms */
+        .fa-github { color: #24292e; }
+        .fa-linkedin { color: #0077b5; }
+        .fa-researchgate { color: #00ccbb; }
+        .fa-orcid { color: #a6ce39; }
+        .fa-graduation-cap { color: #4285f4; }
+        .fa-envelope { color: #d54b3d; }
+        .social-links i:hover {
+            transform: scale(1.2);
+        }
+        header {
+            background: #0a4d8c;
+            color: white;
+            padding: 1em 2em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        header h1 {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        nav a {
+            margin-left: 1.5em;
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ff6200;
+        }
+        main {
+            max-width: calc(100% - 250px); /* Account for sidebar width + padding */
+            margin: 2em auto;
+            padding: 0 8em;
+            padding-right: 250px; /* Prevent content from going under sidebar */
+        }
+        section {
+            margin-bottom: 3em;
+        }
+        section h3 {
+            color: #0a4d8c;
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+        }
+        section p, section ul {
+            line-height: 1.7;
+        }
+        section p {
+            text-align: justify;
+        }
+        section ul li {
+            text-align: justify;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 2em;
+        }
+        /* Sidebar Styling */
+        .sidebar {
+            position: fixed;
+            top: 80px; /* Adjust based on header height */
+            right: 20px;
+            width: 200px;
+            background: #f5f7fa;
+            padding: 1em;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 99;
+        }
+        .sidebar h3 {
+            color: #0a4d8c;
+            font-size: 1.2em;
+            margin-bottom: 0.5em;
+            text-align: center;
+        }
+        .sidebar p {
+            font-size: 0.9em;
+            color: #333;
+            text-align: center;
+            margin-bottom: 1em;
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav {
+                margin-top: 1em;
+            }
+            nav a {
+                margin: 0.5em;
+            }
+            main {
+                max-width: 100%;
+                padding: 0 1em;
+                margin: 1em;
+            }
+            .sidebar {
+                position: static;
+                width: 100%;
+                margin: 1em auto;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Prince Sharma</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="research.html">Research</a>
+            <a href="projects.html">Projects and Publications</a>
+            <a href="news.html">News</a>
+        </nav>
+    </header>
+    <div class="sidebar">
+        <h3>Connect</h3>
+        <p>For <strong><em>collaboration</em></strong> inquiries or further information:</p>
+        <div class="social-links">
+            <a href="mailto:princesharma@alumni.iith.ac.in" target="_blank"><i class="far fa-envelope"></i></a>
+            <a href="https://github.com/pshatom/" target_Dr. Prince Sharma_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/pshatom/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.researchgate.net/profile/Prince-Sharma-37" target="_blank"><i class="fab fa-researchgate"></i></a>
+            <a href="https://orcid.org/0000-0002-1833-8785" target="_blank"><i class="fab fa-orcid"></i></a>
+            <a href="https://scholar.google.com/citations?hl=en&user=YZE2WrEAAAAJ&view_op=list_works&sortby=pubdate" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+        </div>
+    </div>
+    <main>
+<section>
+    <h3>About Me</h3>
+    <p>I am Dr. Prince Sharma, Postdoctoral Fellow at the <strong>Hopkins Extreme Materials Institute</strong>, Johns Hopkins University, specializing in computational materials science. With over 25 publications in leading journals such as <em>Nature Communications</em>, <em>Acta Materialia</em>, <em>Advanced Materials</em>, and <em>Carbon</em>, I am dedicated to advancing materials research to address global challenges. As a computational materials scientist specializing in the design and development of advanced materials for extreme environments. I am deeply passionate about <strong>teaching</strong> and <strong>mentoring</strong>, thriving on scientific discussions that ignite curiosity. As a collaborative researcher, I work with teams at NASA Ames, Ames National Laboratory, and other leading institutions, driving interdisciplinary innovation. My enthusiasm for <strong>coding</strong> fuels my research, while my love for <strong>cooking</strong> mirrors my creative approach to problem-solving. In the spirit of materials, I find inspiration in the delicate balance of order and chaos.</p>
+</section>
+       <section>
+    <h3>✨ What Do I Do</h3>
+    <ul>
+        <li>ab inito Calcualtions</li>
+        <li>Machine Learning</li>
+        <li>Phonon Transport and Lattice Dynamics</li>
+        <li>High-Throughput DFT Methods</li>
+        <li>Method and Theory Development</li>
+    </ul>
+</section>
+<section>
+    <h3>Work Experience</h3>
+    <ul>
+        <li>
+            <strong>Postdoctoral Fellow</strong><br>
+            Hopkins Extreme Materials Institute, Johns Hopkins University, Baltimore, MD, USA (October 2024 - Present)<br>
+        </li>
+        <li>
+            <strong>Visiting Scientist</strong><br>
+            Ames National Laboratory, Ames, IA, USA (September 2023 - September 2024)<br>
+        </li>
+        <li>
+            <strong>Materials Scientist/Engineer</strong><br>
+            AMA, Inc., Thermal Protection Materials Branch, NASA Ames Research Center, Moffett Field, CA, USA (June 6, 2022 - August 15, 2022)<br>
+        </li>
+    </ul>
+</section>
+        <section>
+            <h3>Educational Background</h3>
+            <ul>
+                <li>
+                    <strong>Ph.D. in Mechanical Engineering and Mechanics</strong><br>
+                    Lehigh University, Bethlehem, PA, USA (August 2021 - July 2024)<br>
+                    Dissertation: Additives in Solid-Solutions: Understanding Structural Properties of Alloys From Electron & Phonon Dynamics
+<br>
+                    Advisor: Prof. Ganesh Balasubramanian<br>
+                    Focused on density functional theory and lattice dynamics with experimental validation to optimize solid solution strengthning in Refractory alloys for NASA's space mission.
+                </li>
+                <li>
+                    <strong>Master’s in Materials Science</strong><br>
+                    Indian Institute of Technology Hyderabad, Kandi, India (2018 - 2020)<br>
+                    Developed expertise in high entropy alloys and thermal barrier materials.
+                </li>
+                <li>
+                    <strong>Bachelor’s in Mechanical Engineering</strong><br>
+                    SGSITS Indore, India (2014 - 2028)<br>
+                </li>
+            </ul>
+        </section>
+    </main>
+<footer style="font-size: 0.8em; text-align: center; margin-top: 30px;">
+    <p><em>What is life, but elements in graceful array!</em></p>
+    <p><em>What is death, but that order drifting away!</em></p>
+    <p><em>Translated by me from original Hindi lines of Chakbast Braj Narayan</em></p>
+</footer>
+</body>
+</html>

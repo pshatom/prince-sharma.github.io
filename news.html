@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Prince Sharma - Research</title>
+    <!-- Add Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /* Social Links Styling */
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 15px;
+        }
+        .social-links a {
+            margin: 10px 0;
+            display: inline-block;
+        }
+        .social-links i {
+            font-size: 26px;
+            transition: transform 0.2s ease-in-out;
+            color: #333;
+        }
+        /* Custom colors for specific platforms */
+        .fa-github { color: #24292e; }
+        .fa-linkedin { color: #0077b5; }
+        .fa-researchgate { color: #00ccbb; }
+        .fa-orcid { color: #a6ce39; }
+        .fa-graduation-cap { color: #4285f4; }
+        .fa-envelope { color: #d54b3d; }
+        .social-links i:hover {
+            transform: scale(1.2);
+        }
+        header {
+            background: #0a4d8c;
+            color: white;
+            padding: 1em 2em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        header h1 {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        nav a {
+            margin-left: 1.5em;
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ff6200;
+        }
+        main {
+            max-width: calc(100% - 250px); /* Account for sidebar width + padding */
+            margin: 2em auto;
+            padding: 0 8em;
+            padding-right: 250px; /* Prevent content from going under sidebar */
+        }
+        .hero {
+            background: #f5f7fa;
+            color: #0a4d8c;
+            text-align: center;
+            padding: 4em 1em;
+            margin-bottom: 3em;
+        }
+        .hero h2 {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+            color: #0a4d8c;
+        }
+        .hero p {
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.7;
+            color: #0a4d8c;
+        }
+        section {
+            margin-bottom: 4em;
+        }
+        section h3 {
+            color: #0a4d8c;
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+        }
+        section p {
+            line-height: 1.7;
+            text-align: justify;
+        }
+        section ul {
+            line-height: 1.7;
+            list-style-type: disc;
+            margin-left: 2em;
+            text-align: justify;
+        }
+        .research-summary {
+            background: #f9f9f9;
+            padding: 2em;
+            border-radius: 8px;
+            margin-bottom: 3em;
+        }
+        h2, h3 {
+            color: #0a4d8c;
+            margin-bottom: 0.8em;
+        }
+        h2 {
+            font-size: 1.8em;
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+        h3 {
+            font-size: 1.5em;
+        }
+        .project {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 3em;
+            padding-bottom: 2em;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .project:last-child {
+            border-bottom: none;
+        }
+        .project-content {
+            display: flex;
+            flex-direction: row;
+            gap: 2em;
+            margin-bottom: 1.5em;
+        }
+        .project-text {
+            flex: 1;
+        }
+        .project-image {
+            flex: 1;
+            max-width: 50%; /* Constrain image width to prevent overflow */
+        }
+        .project-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .key-findings {
+            background: #f0f5fa;
+            padding: 1.5em;
+            border-radius: 6px;
+            width: 100%;
+        }
+        .key-findings h4 {
+            color: #0a4d8c;
+            margin-bottom: 0.8em;
+        }
+        .projects-heading {
+            margin-top: 2em;
+            margin-bottom: 1.5em;
+        }
+        /* Sidebar Styling */
+        .sidebar {
+            position: fixed;
+            top: 80px; /* Adjust based on header height */
+            right: 20px;
+            width: 200px;
+            background: #f5f7fa;
+            padding: 1em;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 99;
+        }
+        .sidebar h3 {
+            color: #0a4d8c;
+            font-size: 1.2em;
+            margin-bottom: 0.5em;
+            text-align: center;
+        }
+        .sidebar p {
+            font-size: 0.9em;
+            color: #333;
+            text-align: center;
+            margin-bottom: 1em;
+            line-height: 1.5; /* Explicit line-height for consistency */
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav {
+                margin-top: 1em;
+            }
+            nav a {
+                margin: 0.5em;
+            }
+            main {
+                max-width: 100%;
+                padding: 0 1em;
+                margin: 1em;
+            }
+            .hero {
+                padding: 2em 1em;
+            }
+            .hero h2 {
+                font-size: 1.5em;
+            }
+            .project-content {
+                flex-direction: column;
+            }
+            .project-image {
+                margin-top: 1.5em;
+                max-width: 100%;
+            }
+            .sidebar {
+                position: static;
+                width: 100%;
+                margin: 1em auto;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Prince Sharma</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="research.html">Research</a>            
+            <a href="projects.html">Projects and Publications</a>
+            <a href="news.html">News</a>
+        </nav>
+    </header>
+    <div class="sidebar">
+        <h3>Connect</h3>
+        <p>For <strong><em>collaboration</em></strong> inquiries or further information:</p>
+        <div class="social-links">
+            <a href="mailto:princesharma@alumni.iith.ac.in" target="_blank"><i class="far fa-envelope"></i></a>
+            <a href="https://github.com/pshatom/" target_Dr. Prince Sharma_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/pshatom/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.researchgate.net/profile/Prince-Sharma-37" target="_blank"><i class="fab fa-researchgate"></i></a>
+            <a href="https://orcid.org/0000-0002-1833-8785" target="_blank"><i class="fab fa-orcid"></i></a>
+            <a href="https://scholar.google.com/citations?hl=en&user=YZE2WrEAAAAJ&view_op=list_works&sortby=pubdate" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+        </div>
+    </div>
+    <main>
+
+ <section class="research">
+        <h2>News and Achievements</h2>
+        <section>
+            <h3>News</h3>
+            <ul>
+                <li><a href="https://engineering.lehigh.edu/news/article/prince-sharma-seeing-wider-picture">Prince Sharma: Seeing the wider picture</a></li>
+                <li><a href="https://link.growkudos.com/1hpdt8alszk">Ultrafast synthesis of amorphous high entropy alloy for advanced sustainable applications</a></li>
+                <li><a href="https://wordpress.lehigh.edu/gsrs/2024/12/11/mixing-metals-to-make-mighty-materials-the-magic-of-atomic-disorder-and-entropy/">Mixing Metals to Make Mighty Materials: The Magic of Atomic Disorder and Entropy</a></li>
+                <li><a href="https://philadelphia-stle.org/lehigh-university-graduate-student-awarded-philadelphia-stle-scholarship-4/">Lehigh University Graduate Student Awarded Philadelphia STLE Scholarship</a></li>
+            <img src="cover.jpg" alt="Journal Cover" style="max-width: 300px; height: auto; display: block; margin: 1em 0;">
+            </ul>
+        </section>
+        <section>
+            <h3>Invited Talks</h3>
+            <ul>
+                <li>Examining Phonon Transport in High Entropy Oxides: An Advanced Thermal Barrier Coating Material, Host: Prof. Sandip Kumar Saha, Department of Mechanical Engineering, Indian Institute of Technology Bombay, India.</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Achievements</h3>
+            <ul>
+                <li>STLE Philadelphia Scholarship 2023 Award for research in two-dimensional materials.</li>
+                <li>Doctoral Travel Grants for Global Opportunities Award from Lehigh University for international travel.</li>
+                <li>DFT Workshop - "Moving ions with VASP" Selected in top 100 candidates to participate.</li>
+                <li>Lehigh University Fellowship for PhD studies.</li>
+                <li>Rossin Doctoral Fellow 2022-2023 for PhD studies.</li>
+                <li>Kanai and Bibha Mukherjee Fund for travel to United States.</li>
+                <li>Nominated for UNESCO-POLAND Co-Sponsored Engineering Fellowship 2020.</li>
+                <li>JENESYS Scholarship Award 2019, Ministry of Foreign Affairs, Government of Japan.</li>
+                <li>All India Rank-53, Graduate Aptitude Test in Engineering 2018.</li>
+                <li>Winner, Inter School Chess Championship 2009.</li>
+            </ul>
+        </section>
+    </section>
+
+
+    </main>
+</body>
+</html>
