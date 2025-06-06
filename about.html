@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Prince Sharma - About Me</title>
+    <title>Dr. Prince Sharma - Research</title>
     <!-- Add Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -13,32 +13,7 @@
             box-sizing: border-box;
             font-family: Arial, Helvetica, sans-serif;
         }
-        /* Social Links Styling */
-        .social-links {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 15px;
-        }
-        .social-links a {
-            margin: 10px 0;
-            display: inline-block;
-        }
-        .social-links i {
-            font-size: 26px;
-            transition: transform 0.2s ease-in-out;
-            color: #333;
-        }
-        /* Custom colors for specific platforms */
-        .fa-github { color: #24292e; }
-        .fa-linkedin { color: #0077b5; }
-        .fa-researchgate { color: #00ccbb; }
-        .fa-orcid { color: #a6ce39; }
-        .fa-graduation-cap { color: #4285f4; }
-        .fa-envelope { color: #d54b3d; }
-        .social-links i:hover {
-            transform: scale(1.2);
-        }
+
         header {
             background: #0a4d8c;
             color: white;
@@ -50,10 +25,12 @@
             top: 0;
             z-index: 100;
         }
+        
         header h1 {
             font-size: 1.5em;
             font-weight: bold;
         }
+        
         nav a {
             margin-left: 1.5em;
             text-decoration: none;
@@ -61,81 +38,226 @@
             font-weight: 500;
             transition: color 0.3s;
         }
+        
         nav a:hover {
             color: #ff6200;
         }
+
+        /* Custom colors for specific platforms */
+        .fa-github { color: #24292e; }
+        .fa-linkedin { color: #0077b5; }
+        .fa-researchgate { color: #00ccbb; }
+        .fa-orcid { color: #a6ce39; }
+        .fa-graduation-cap { color: #4285f4; }
+        .fa-envelope { color: #d54b3d; }
+
         main {
-            max-width: calc(100% - 250px); /* Account for sidebar width + padding */
+            max-width: 1100px;
             margin: 2em auto;
-            padding: 0 8em;
-            padding-right: 250px; /* Prevent content from going under sidebar */
+            padding: 0 2em;
         }
-        section {
+        
+        .hero {
+            background: #f5f7fa;
+            color: #0a4d8c;
+            text-align: center;
+            padding: 4em 1em;
             margin-bottom: 3em;
+            border-radius: 10px;
         }
+        
+        .hero h2 {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+            color: #0a4d8c;
+        }
+        
+        .hero p {
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.7;
+            color: #0a4d8c;
+        }
+        
+        section {
+            margin-bottom: 4em;
+        }
+        
         section h3 {
             color: #0a4d8c;
             font-size: 1.5em;
             margin-bottom: 0.5em;
         }
-        section p, section ul {
-            line-height: 1.7;
-        }
+        
         section p {
+            line-height: 1.7;
             text-align: justify;
         }
-        section ul li {
-            text-align: justify;
-        }
-        ul {
+        
+        section ul {
+            line-height: 1.7;
             list-style-type: disc;
             margin-left: 2em;
+            text-align: justify;
         }
-        /* Sidebar Styling */
-        .sidebar {
+        
+        .research-summary {
+            background: #f9f9f9;
+            padding: 2em;
+            border-radius: 8px;
+            margin-bottom: 3em;
+        }
+        
+        h2, h3 {
+            color: #0a4d8c;
+            margin-bottom: 0.8em;
+        }
+        
+        h2 {
+            font-size: 1.8em;
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+        
+        h3 {
+            font-size: 1.5em;
+        }
+        
+        .project {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 3em;
+            padding-bottom: 2em;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .project:last-child {
+            border-bottom: none;
+        }
+        
+        .project-content {
+            display: flex;
+            flex-direction: row;
+            gap: 2em;
+            margin-bottom: 1.5em;
+        }
+        
+        .project-text {
+            flex: 1;
+        }
+        
+        .project-image {
+            flex: 1;
+            max-width: 50%;
+        }
+        
+        .project-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .key-findings {
+            background: #f0f5fa;
+            padding: 1.5em;
+            border-radius: 6px;
+            width: 100%;
+        }
+        
+        .key-findings h4 {
+            color: #0a4d8c;
+            margin-bottom: 0.8em;
+        }
+        
+        .projects-heading {
+            margin-top: 2em;
+            margin-bottom: 1.5em;
+        }
+
+        /* Bottom Bar */
+        .bottom-bar {
             position: fixed;
-            top: 80px; /* Adjust based on header height */
-            right: 20px;
-            width: 200px;
+            bottom: -200px;
+            left: 0;
+            right: 0;
+            width: 100%;
             background: #f5f7fa;
             padding: 1em;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            z-index: 99;
+            border-radius: 15px 15px 0 0;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.2);
+            z-index: 1001;
+            transition: bottom 0.3s ease-in-out;
         }
-        .sidebar h3 {
+
+        .bottom-bar.show {
+            bottom: 0;
+        }
+
+        .bottom-bar h3 {
             color: #0a4d8c;
-            font-size: 1.2em;
-            margin-bottom: 0.5em;
+            font-size: 1.1em;
+            margin-bottom: 0.3em;
             text-align: center;
         }
-        .sidebar p {
+        
+        .bottom-bar p {
             font-size: 0.9em;
             color: #333;
             text-align: center;
-            margin-bottom: 1em;
+            margin-bottom: 0.8em;
         }
+
+        /* Bottom bar social links */
+        .bottom-bar .social-links {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .bottom-bar .social-links a {
+            margin: 5px;
+            display: inline-block;
+        }
+        
+        .bottom-bar .social-links i {
+            font-size: 22px;
+            transition: transform 0.2s ease-in-out;
+            color: #333;
+        }
+
+        .bottom-bar .social-links i:hover {
+            transform: scale(1.2);
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
+            main {
+                padding: 0 1em;
+            }
+            
+            .project-content {
+                flex-direction: column;
+            }
+            
+            .project-image {
+                max-width: 100%;
+            }
+            
             header {
                 flex-direction: column;
                 text-align: center;
             }
+            
             nav {
                 margin-top: 1em;
             }
+            
             nav a {
-                margin: 0.5em;
-            }
-            main {
-                max-width: 100%;
-                padding: 0 1em;
-                margin: 1em;
-            }
-            .sidebar {
-                position: static;
-                width: 100%;
-                margin: 1em auto;
-                box-shadow: none;
+                margin: 0 0.5em;
             }
         }
     </style>
@@ -151,18 +273,9 @@
             <a href="news.html">News</a>
         </nav>
     </header>
-    <div class="sidebar">
-        <h3>Connect</h3>
-        <p>For <strong><em>collaboration</em></strong> inquiries or further information:</p>
-        <div class="social-links">
-            <a href="mailto:princesharma@alumni.iith.ac.in" target="_blank"><i class="far fa-envelope"></i></a>
-            <a href="https://github.com/pshatom/" target_Dr. Prince Sharma_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/pshatom/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.researchgate.net/profile/Prince-Sharma-37" target="_blank"><i class="fab fa-researchgate"></i></a>
-            <a href="https://orcid.org/0000-0002-1833-8785" target="_blank"><i class="fab fa-orcid"></i></a>
-            <a href="https://scholar.google.com/citations?hl=en&user=YZE2WrEAAAAJ&view_op=list_works&sortby=pubdate" target="_blank"><i class="fas fa-graduation-cap"></i></a>
-        </div>
-    </div>
+    
+
+
     <main>
 <section>
     <h3>About Me</h3>
